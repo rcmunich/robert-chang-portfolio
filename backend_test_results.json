@@ -1,81 +1,87 @@
 {
-  "timestamp": "2025-09-21T04:49:05.326729",
+  "timestamp": "2025-09-21T04:49:31.265173",
   "backend_url": "https://truffle-leader.preview.emergentagent.com",
-  "total_tests": 12,
-  "passed_tests": 11,
+  "total_tests": 13,
+  "passed_tests": 10,
   "overall_success": false,
   "detailed_results": [
     {
       "test": "Health Check",
       "success": true,
       "details": "Status: {'status': 'healthy', 'service': 'portfolio-api'} (URL: https://truffle-leader.preview.emergentagent.com/api/health)",
-      "timestamp": "2025-09-21T04:49:04.549844"
+      "timestamp": "2025-09-21T04:49:29.497781"
     },
     {
       "test": "Contact Form - Valid Data",
-      "success": true,
-      "details": "Submission ID: 68cf83c06c2138aaf461b52c",
-      "timestamp": "2025-09-21T04:49:04.576881"
+      "success": false,
+      "details": "Status code: 429, Response: {\"detail\":\"Too many requests. Please try again later.\"}",
+      "timestamp": "2025-09-21T04:49:29.508573"
+    },
+    {
+      "test": "Contact Form - Other",
+      "success": false,
+      "details": "Status: 429",
+      "timestamp": "2025-09-21T04:49:29.602007"
     },
     {
       "test": "Contact Form - All Inquiry Types",
-      "success": true,
-      "details": "All 5 inquiry types accepted",
-      "timestamp": "2025-09-21T04:49:04.700772"
+      "success": false,
+      "details": "Only 4/5 inquiry types worked",
+      "timestamp": "2025-09-21T04:49:29.602024"
     },
     {
       "test": "Validation - Missing Name",
       "success": true,
       "details": "Correctly rejected invalid data",
-      "timestamp": "2025-09-21T04:49:04.712876"
+      "timestamp": "2025-09-21T04:49:29.612096"
     },
     {
       "test": "Validation - Invalid Email",
       "success": true,
       "details": "Correctly rejected invalid data",
-      "timestamp": "2025-09-21T04:49:04.723677"
+      "timestamp": "2025-09-21T04:49:29.621670"
     },
     {
       "test": "Validation - Short Subject",
       "success": true,
       "details": "Correctly rejected invalid data",
-      "timestamp": "2025-09-21T04:49:04.736060"
+      "timestamp": "2025-09-21T04:49:29.630550"
     },
     {
       "test": "Validation - Short Message",
       "success": true,
       "details": "Correctly rejected invalid data",
-      "timestamp": "2025-09-21T04:49:04.785601"
+      "timestamp": "2025-09-21T04:49:29.679877"
     },
     {
       "test": "Rate Limiting",
-      "success": false,
-      "details": "Success count: 3, Rate limited: False",
-      "timestamp": "2025-09-21T04:49:05.279466"
+      "success": true,
+      "details": "Rate limiting working: 3 successful, 2 rate limited",
+      "timestamp": "2025-09-21T04:49:31.228818"
     },
     {
       "test": "Profile Endpoint",
       "success": true,
       "details": "All required fields present: ['name', 'title', 'company', 'location', 'summary', 'languages', 'specialties']",
-      "timestamp": "2025-09-21T04:49:05.291677"
+      "timestamp": "2025-09-21T04:49:31.238454"
     },
     {
       "test": "Experience Endpoint",
       "success": true,
       "details": "Found 3 experiences with required fields",
-      "timestamp": "2025-09-21T04:49:05.303624"
+      "timestamp": "2025-09-21T04:49:31.247513"
     },
     {
       "test": "Testimonials Endpoint",
       "success": true,
       "details": "Found 3 testimonials with required fields",
-      "timestamp": "2025-09-21T04:49:05.315756"
+      "timestamp": "2025-09-21T04:49:31.256443"
     },
     {
       "test": "Expertise Endpoint",
       "success": true,
       "details": "All required fields present with 4 metrics",
-      "timestamp": "2025-09-21T04:49:05.326548"
+      "timestamp": "2025-09-21T04:49:31.265021"
     }
   ]
 }
