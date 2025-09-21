@@ -1,0 +1,81 @@
+{
+  "timestamp": "2025-09-21T04:46:14.217321",
+  "backend_url": "https://truffle-leader.preview.emergentagent.com",
+  "total_tests": 12,
+  "passed_tests": 6,
+  "overall_success": false,
+  "detailed_results": [
+    {
+      "test": "Health Check",
+      "success": false,
+      "details": "Exception: Expecting value: line 1 column 1 (char 0)",
+      "timestamp": "2025-09-21T04:46:13.514857"
+    },
+    {
+      "test": "Contact Form - Valid Data",
+      "success": true,
+      "details": "Submission ID: 68cf83157785a11ac4078d5c",
+      "timestamp": "2025-09-21T04:46:13.553082"
+    },
+    {
+      "test": "Contact Form - All Inquiry Types",
+      "success": true,
+      "details": "All 5 inquiry types accepted",
+      "timestamp": "2025-09-21T04:46:13.652618"
+    },
+    {
+      "test": "Validation - Missing Name",
+      "success": true,
+      "details": "Correctly rejected invalid data",
+      "timestamp": "2025-09-21T04:46:13.664258"
+    },
+    {
+      "test": "Validation - Invalid Email",
+      "success": true,
+      "details": "Correctly rejected invalid data",
+      "timestamp": "2025-09-21T04:46:13.675115"
+    },
+    {
+      "test": "Validation - Short Subject",
+      "success": true,
+      "details": "Correctly rejected invalid data",
+      "timestamp": "2025-09-21T04:46:13.724189"
+    },
+    {
+      "test": "Validation - Short Message",
+      "success": true,
+      "details": "Correctly rejected invalid data",
+      "timestamp": "2025-09-21T04:46:13.732441"
+    },
+    {
+      "test": "Rate Limiting",
+      "success": false,
+      "details": "Success count: 3, Rate limited: False",
+      "timestamp": "2025-09-21T04:46:14.175509"
+    },
+    {
+      "test": "Profile Endpoint",
+      "success": false,
+      "details": "Status code: 500",
+      "timestamp": "2025-09-21T04:46:14.184965"
+    },
+    {
+      "test": "Experience Endpoint",
+      "success": false,
+      "details": "Status code: 500",
+      "timestamp": "2025-09-21T04:46:14.193935"
+    },
+    {
+      "test": "Testimonials Endpoint",
+      "success": false,
+      "details": "Status code: 500",
+      "timestamp": "2025-09-21T04:46:14.207380"
+    },
+    {
+      "test": "Expertise Endpoint",
+      "success": false,
+      "details": "Status code: 500",
+      "timestamp": "2025-09-21T04:46:14.217149"
+    }
+  ]
+}
