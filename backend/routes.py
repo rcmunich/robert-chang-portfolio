@@ -122,7 +122,7 @@ async def get_profile():
                     ]
                 }
             }
-            return SuccessResponse(data=default_profile)
+            return SuccessResponse(data=default_profile, message="Profile data retrieved successfully")
         
         return SuccessResponse(data=profile.dict())
     except Exception as e:
