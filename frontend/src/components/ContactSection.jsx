@@ -30,21 +30,43 @@ const ContactSection = () => {
     e.preventDefault();
     setIsSubmitting(true);
     
-    // Simulate form submission
-    setTimeout(() => {
+    try {
+      const BACKEND_URL = process.env.REACT_APP_BACKEND_URL;
+      const response = await fetch(`${BACKEND_URL}/api/contact`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+      
+      const data = await response.json();
+      
+      if (response.ok && data.success) {
+        toast({
+          title: "Message Sent!",
+          description: data.message,
+        });
+        setFormData({
+          name: '',
+          email: '',
+          subject: '',
+          message: '',
+          inquiryType: ''
+        });
+      } else {
+        throw new Error(data.error?.message || 'Failed to send message');
+      }
+    } catch (error) {
+      console.error('Error submitting contact form:', error);
       toast({
-        title: "Message Sent!",
-        description: "Thank you for your interest. I'll get back to you within 24 hours.",
+        title: "Error",
+        description: error.message || "Failed to send message. Please try again.",
+        variant: "destructive"
       });
-      setFormData({
-        name: '',
-        email: '',
-        subject: '',
-        message: '',
-        inquiryType: ''
-      });
+    } finally {
       setIsSubmitting(false);
-    }, 2000);
+    }
   };
 
   const inquiryTypes = [
