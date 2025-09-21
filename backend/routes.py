@@ -262,7 +262,7 @@ async def get_truffle_expertise():
                     {"label": "Harvest Success Rate", "value": "95%"}
                 ]
             }
-            return SuccessResponse(data=default_expertise)
+            return SuccessResponse(data=default_expertise, message="Expertise data retrieved successfully")
         
         return SuccessResponse(data=expertise.dict())
     except Exception as e:
