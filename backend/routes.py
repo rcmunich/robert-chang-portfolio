@@ -186,7 +186,7 @@ async def get_experiences():
                     "isActive": True
                 }
             ]
-            return SuccessResponse(data=default_experiences)
+            return SuccessResponse(data=default_experiences, message="Experience data retrieved successfully")
         
         return SuccessResponse(data=[exp.dict() for exp in experiences])
     except Exception as e:
