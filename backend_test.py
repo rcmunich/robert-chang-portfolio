@@ -37,28 +37,24 @@ class PortfolioAPITester:
     def test_health_check(self):
         """Test health check endpoint"""
         try:
-            response = self.session.get(f"{BACKEND_URL}/health", timeout=10)
+            # Try both /health and /api/health endpoints
+            health_urls = [f"{BACKEND_URL}/health", f"{API_BASE}/health"]
             
-            if response.status_code == 200:
-                try:
-                    data = response.json()
-                    if data.get("status") == "healthy" and data.get("service") == "portfolio-api":
-                        self.log_test("Health Check", True, f"Status: {data}")
-                        return True
-                    else:
-                        self.log_test("Health Check", False, f"Unexpected response: {data}")
-                        return False
-                except json.JSONDecodeError:
-                    # If JSON parsing fails, check if response text contains expected content
-                    if "healthy" in response.text and "portfolio" in response.text:
-                        self.log_test("Health Check", True, f"Health endpoint responding: {response.text}")
-                        return True
-                    else:
-                        self.log_test("Health Check", False, f"Invalid JSON response: {response.text}")
-                        return False
-            else:
-                self.log_test("Health Check", False, f"Status code: {response.status_code}")
-                return False
+            for url in health_urls:
+                response = self.session.get(url, timeout=10)
+                
+                if response.status_code == 200:
+                    try:
+                        data = response.json()
+                        if data.get("status") == "healthy" and data.get("service") == "portfolio-api":
+                            self.log_test("Health Check", True, f"Status: {data} (URL: {url})")
+                            return True
+                    except json.JSONDecodeError:
+                        continue
+            
+            # If neither worked, log failure
+            self.log_test("Health Check", False, "Health endpoint not accessible at /health or /api/health")
+            return False
                 
         except Exception as e:
             self.log_test("Health Check", False, f"Exception: {str(e)}")
