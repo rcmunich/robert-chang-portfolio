@@ -92,7 +92,7 @@ const Footer = () => {
               </div>
               <div className="text-slate-400">
                 <div className="text-sm">Languages</div>
-                <div className="text-white text-sm">English, German, Mandarin, Japanese</div>
+                <div className="text-white text-sm">English, German, Mandarin, Japanese, Spanish</div>
               </div>
             </div>
             
