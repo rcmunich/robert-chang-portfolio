@@ -124,7 +124,7 @@ async def get_profile():
             }
             return SuccessResponse(data=default_profile, message="Profile data retrieved successfully")
         
-        return SuccessResponse(data=profile.dict())
+        return SuccessResponse(data=profile.dict(), message="Profile data retrieved successfully")
     except Exception as e:
         logger.error(f"Error fetching profile data: {str(e)}")
         raise HTTPException(status_code=500, detail="Internal server error")
