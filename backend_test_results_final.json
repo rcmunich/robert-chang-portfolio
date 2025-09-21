@@ -1,0 +1,63 @@
+{
+  "timestamp": "2025-09-21T04:50:25.788774",
+  "backend_url": "https://truffle-leader.preview.emergentagent.com",
+  "total_tests": 9,
+  "passed_tests": 9,
+  "overall_success": true,
+  "detailed_results": [
+    {
+      "test": "Health Check",
+      "success": true,
+      "details": "Status: {'status': 'healthy', 'service': 'portfolio-api'}",
+      "timestamp": "2025-09-21T04:50:25.590370"
+    },
+    {
+      "test": "Profile Endpoint",
+      "success": true,
+      "details": "All required fields present: ['name', 'title', 'company', 'location', 'summary', 'languages', 'specialties']",
+      "timestamp": "2025-09-21T04:50:25.604769"
+    },
+    {
+      "test": "Experience Endpoint",
+      "success": true,
+      "details": "Found 3 experiences with required fields",
+      "timestamp": "2025-09-21T04:50:25.638883"
+    },
+    {
+      "test": "Testimonials Endpoint",
+      "success": true,
+      "details": "Found 3 testimonials with required fields",
+      "timestamp": "2025-09-21T04:50:25.653612"
+    },
+    {
+      "test": "Expertise Endpoint",
+      "success": true,
+      "details": "All required fields present with 4 metrics",
+      "timestamp": "2025-09-21T04:50:25.663367"
+    },
+    {
+      "test": "Contact Form - Basic Functionality",
+      "success": true,
+      "details": "Submission ID: 68cf84116c2138aaf461b53d",
+      "timestamp": "2025-09-21T04:50:25.674435"
+    },
+    {
+      "test": "Validation - Missing Name",
+      "success": true,
+      "details": "Correctly rejected invalid data",
+      "timestamp": "2025-09-21T04:50:25.724168"
+    },
+    {
+      "test": "Validation - Invalid Email",
+      "success": true,
+      "details": "Correctly rejected invalid data",
+      "timestamp": "2025-09-21T04:50:25.775613"
+    },
+    {
+      "test": "Inquiry Types",
+      "success": true,
+      "details": "API accepts inquiry types (tested with 'Business Partnership')",
+      "timestamp": "2025-09-21T04:50:25.788616"
+    }
+  ]
+}
