@@ -115,7 +115,7 @@ class TruffleExpertiseCreate(BaseModel):
 # Response Models
 class SuccessResponse(BaseModel):
     success: bool = True
-    data: Optional[dict] = None
+    data: Optional[Union[dict, list]] = None
     message: str
 
 class ErrorResponse(BaseModel):
