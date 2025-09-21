@@ -231,7 +231,7 @@ async def get_testimonials():
             ]
             return SuccessResponse(data=default_testimonials, message="Testimonials retrieved successfully")
         
-        return SuccessResponse(data=[test.dict() for test in testimonials])
+        return SuccessResponse(data=[test.dict() for test in testimonials], message="Testimonials retrieved successfully")
     except Exception as e:
         logger.error(f"Error fetching testimonials: {str(e)}")
         raise HTTPException(status_code=500, detail="Internal server error")
