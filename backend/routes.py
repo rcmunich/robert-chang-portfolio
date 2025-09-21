@@ -24,7 +24,7 @@ def check_rate_limit(ip_address: str, max_requests: int = 3, time_window: int = 
     requests = rate_limit_storage[ip_address]
     
     # Remove old requests outside time window
-    requests[:] = [req_time for req_time in requests if (now - req_time).seconds < time_window]
+    requests[:] = [req_time for req_time in requests if (now - req_time).total_seconds() < time_window]
     
     if len(requests) >= max_requests:
         return False
