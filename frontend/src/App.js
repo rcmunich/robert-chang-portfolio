@@ -9,7 +9,7 @@ import ContactSection from "./components/ContactSection";
 import Footer from "./components/Footer";
 import { Toaster } from "./components/ui/toaster";
 
-const BACKEND_URL = process.env.REACT_APP_BACKEND_URL;
+const BACKEND_URL = process.env.REACT_APP_BACKEND_URL || 'http://localhost:8001';
 
 function App() {
   const [portfolioData, setPortfolioData] = useState(null);
