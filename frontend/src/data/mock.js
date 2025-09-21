@@ -11,7 +11,7 @@ export const portfolioData = {
       "Alliance/Partnerships", "Contract Negotiations", "Sales Development", "Cross-cultural Teams",
       "Team Leadership", "Marketing Management", "Mobile and Wireless", "Branding", "Lead Generation"
     ],
-    languages: ["English", "German", "Mandarin Chinese", "Japanese"]
+    languages: ["English", "German", "Mandarin Chinese", "Japanese", "Spanish"]
   },
   
   experience: [
