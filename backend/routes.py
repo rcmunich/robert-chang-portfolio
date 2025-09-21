@@ -264,7 +264,7 @@ async def get_truffle_expertise():
             }
             return SuccessResponse(data=default_expertise, message="Expertise data retrieved successfully")
         
-        return SuccessResponse(data=expertise.dict())
+        return SuccessResponse(data=expertise.dict(), message="Expertise data retrieved successfully")
     except Exception as e:
         logger.error(f"Error fetching truffle expertise: {str(e)}")
         raise HTTPException(status_code=500, detail="Internal server error")
