@@ -229,7 +229,7 @@ async def get_testimonials():
                     "isActive": True
                 }
             ]
-            return SuccessResponse(data=default_testimonials)
+            return SuccessResponse(data=default_testimonials, message="Testimonials retrieved successfully")
         
         return SuccessResponse(data=[test.dict() for test in testimonials])
     except Exception as e:
