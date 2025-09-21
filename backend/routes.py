@@ -34,6 +34,11 @@ def check_rate_limit(ip_address: str, max_requests: int = 3, time_window: int = 
 
 router = APIRouter(prefix="/api")
 
+# Health check endpoint
+@router.get("/health")
+async def api_health_check():
+    return {"status": "healthy", "service": "portfolio-api"}
+
 # Contact Form Routes
 @router.post("/contact", response_model=SuccessResponse)
 async def submit_contact_form(
