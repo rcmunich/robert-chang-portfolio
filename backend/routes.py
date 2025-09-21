@@ -188,7 +188,7 @@ async def get_experiences():
             ]
             return SuccessResponse(data=default_experiences, message="Experience data retrieved successfully")
         
-        return SuccessResponse(data=[exp.dict() for exp in experiences])
+        return SuccessResponse(data=[exp.dict() for exp in experiences], message="Experience data retrieved successfully")
     except Exception as e:
         logger.error(f"Error fetching experiences: {str(e)}")
         raise HTTPException(status_code=500, detail="Internal server error")
