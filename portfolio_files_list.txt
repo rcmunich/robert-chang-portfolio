@@ -1,0 +1,17 @@
+total 300
+drwxr-xr-x 7 root root   4096 Sep 21 05:15 .
+drwxr-xr-x 1 root root   4096 Sep 21 04:21 ..
+drwxr-xr-x 2 root root   4096 Sep 20 07:07 .emergent
+drwxr-xr-x 8 root root   4096 Sep 21 05:15 .git
+-rw-r--r-- 1 root root    926 Jun 18 12:48 .gitignore
+-rw-r--r-- 1 root root    130 Sep 21 05:03 .railway-ignore
+-rw-r--r-- 1 root root    111 Sep 21 05:03 Procfile
+-rw-r--r-- 1 root root   2485 Sep 21 05:05 README.md
+drwxr-xr-x 3 root root   4096 Sep 21 05:03 backend
+-rw-r--r-- 1 root root   4729 Sep 21 04:41 contracts.md
+drwxr-xr-x 5 root root   4096 Sep 21 04:23 frontend
+-rw-r--r-- 1 root root      0 Sep 21 05:15 portfolio_files_list.txt
+-rw-r--r-- 1 root root    212 Sep 21 05:03 railway.json
+-rw-r--r-- 1 root root 243267 Sep 21 05:15 robert-chang-portfolio.tar.gz
+drwxr-xr-x 2 root root   4096 Jun 18 04:46 tests
+-rw-r--r-- 1 root root     86 Jun 18 04:46 yarn.lock
