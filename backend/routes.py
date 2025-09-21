@@ -118,7 +118,7 @@ async def get_profile():
                     "company": "American Truffle Company",
                     "location": "San Francisco, California, United States",
                     "summary": "Senior global business leader in technology, truffle cultivation and trade. Results-driven Stanford MBA with extensive general management experience and technical background. Fluent in English, German, Mandarin Chinese and Japanese.",
-                    "languages": ["English", "German", "Mandarin Chinese", "Japanese"],
+                    "languages": ["English", "German", "Mandarin Chinese", "Japanese", "Spanish"],
                     "specialties": [
                         "Market Strategies", "Channel Marketing", "Product Marketing", "Business Development",
                         "Advertising", "Pricing", "Sales Promotions", "Distribution", "Corporate Communications",
