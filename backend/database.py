@@ -1,6 +1,10 @@
 from motor.motor_asyncio import AsyncIOMotorClient
 from typing import List, Optional
 import os
+from dotenv import load_dotenv
+
+# Load environment variables
+load_dotenv()
 from models import (
     ContactSubmission, ContactSubmissionCreate, ProfileData, PersonalInfo,
     Experience, ExperienceCreate, Testimonial, TestimonialCreate,
