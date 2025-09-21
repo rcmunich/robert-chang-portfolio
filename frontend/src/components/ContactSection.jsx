@@ -31,7 +31,7 @@ const ContactSection = () => {
     setIsSubmitting(true);
     
     try {
-      const BACKEND_URL = process.env.REACT_APP_BACKEND_URL;
+      const BACKEND_URL = process.env.REACT_APP_BACKEND_URL || 'http://localhost:8001';
       const response = await fetch(`${BACKEND_URL}/api/contact`, {
         method: 'POST',
         headers: {
